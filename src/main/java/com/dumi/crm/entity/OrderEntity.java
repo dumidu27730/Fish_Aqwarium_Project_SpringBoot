@@ -7,25 +7,19 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.util.Date;
-
 @Data
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "fish")
-public class FishEntity {
+@Table(name = "order")
+public class OrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Long supplierId;
-    private Date arrrivalDate;
-    private Long size;
-    private  String name;
-    private String description;
-    private Long categoryId;
-    private Long stockQuantity;
-    private String healthStatus;
+    private Long customerId;
+    private Date date;
+    private Date time;
+    private String status;
     private Double price;
-
 }
